@@ -1,5 +1,8 @@
 """
 Views related to operations on course objects
+
+mcdaniel dec-2020: marking this file in case we run into permissions problems with instructors
+from 3rd party institutions who should be able to create course runs.
 """
 
 

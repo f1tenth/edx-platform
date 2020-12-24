@@ -85,6 +85,14 @@ def get_user_permissions(user, course_key, org=None):
     if is_ccx_course(course_key):
         return STUDIO_NO_PERMISSIONS
     all_perms = STUDIO_EDIT_ROLES | STUDIO_VIEW_USERS | STUDIO_EDIT_CONTENT | STUDIO_VIEW_CONTENT
+
+    # mcdaniel dec-2020: all approved course creators receive all_perms to the course templates.
+    if str(course_key)[-8:] == 'Template':
+        log.info('common.djangoapps.student.auth.get_user_permissions() - template found. granting all_perms on: {course_key}'.format(
+            course_key=course_key
+            ))
+        return all_perms
+
     # global staff, org instructors, and course instructors have all permissions:
     if GlobalStaff().has_user(user) or OrgInstructorRole(org=org).has_user(user):
         return all_perms
