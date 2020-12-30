@@ -11,6 +11,9 @@ from django.conf import settings
 from django.core.exceptions import PermissionDenied
 from opaque_keys.edx.locator import LibraryLocator
 
+import logging
+log = logging.getLogger(__name__)
+
 from common.djangoapps.student.roles import (
     CourseBetaTesterRole,
     CourseCreatorRole,
