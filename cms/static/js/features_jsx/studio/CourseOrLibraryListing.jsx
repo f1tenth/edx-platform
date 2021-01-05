@@ -20,11 +20,11 @@ export function CourseOrLibraryListing(props) {
 
   function getBookCard( course_number ){
     switch( course_number ){
-      case "4Weeks":
+      case "4weeks":
         return "https://cdn.f1tenth.org/course_templates/LMS_Template_Logo_400px_4weeks.png";
-      case "10Weeks":
+      case "10weeks":
         return "https://cdn.f1tenth.org/course_templates/LMS_Template_Logo_400px_10weeks.png";
-      case "15Weeks":
+      case "15weeks":
         return "https://cdn.f1tenth.org/course_templates/LMS_Template_Logo_400px_15weeks.png";
       default:
         return "https://cdn.f1tenth.org/course_templates/LMS_Template_Logo_400px_4weeks.png"
