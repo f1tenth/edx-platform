@@ -20,12 +20,14 @@ export function CourseOrLibraryListing(props) {
 
   function getBookCard( course_number ){
     switch( course_number ){
-      case "OS94717200": // OpenStax Prealgebra
-        return "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/prealgebra_1.svg";
-      case "OS94717225": // OpenStax Elementary Algebra
-        return "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/elementary-algebra.svg";
+      case "4Weeks":
+        return "https://cdn.f1tenth.org/course_templates/LMS_Template_Logo_400px_4weeks.png";
+      case "10Weeks":
+        return "https://cdn.f1tenth.org/course_templates/LMS_Template_Logo_400px_10weeks.png";
+      case "15Weeks":
+        return "https://cdn.f1tenth.org/course_templates/LMS_Template_Logo_400px_15weeks.png";
       default:
-        return "https://avatars2.githubusercontent.com/u/3805549?s=400&v=4"
+        return "https://cdn.f1tenth.org/course_templates/LMS_Template_Logo_400px_4weeks.png"
       }
   }
 
